@@ -15,8 +15,8 @@ class CreatePostsTable extends Migration {
 	{
 		Schema::create('posts',function(Blueprint $table){
             $table->increments('id');
-            $table->string('uid');
-            $table->enum('post_type',['text,story,image,video']);
+            $table->string('slug');
+            $table->enum('post_type',['text','story','image','video']);
             $table->integer('user_id');
             $table->integer('category_id');
             $table->text('post_data');

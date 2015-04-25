@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class PostController extends Controller {
 
@@ -15,7 +16,8 @@ class PostController extends Controller {
 	 */
 	public function index($type = null)
 	{
-		echo 'show some form of list of posts';
+
+        return view('post.index',compact('posts'));
 	}
 
 	/**
@@ -25,7 +27,7 @@ class PostController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('post.create');
 	}
 
 	/**
@@ -35,7 +37,7 @@ class PostController extends Controller {
 	 */
 	public function store()
 	{
-		//
+
 	}
 
 	/**
@@ -44,9 +46,11 @@ class PostController extends Controller {
 	 * @param  string  $uid
 	 * @return Response
 	 */
-	public function show($uid)
+	public function show($slug)
 	{
+        $post = Post::where('slug', '=', $slug)->with('tags','comments')->firstOrFail();
 
+        return view('post.show',compact('post'));
 	}
 
 	/**
