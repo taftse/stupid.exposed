@@ -24,15 +24,14 @@ Route::get('category', function(){
 // list all posts belonging to a category
 Route::get('category/{category}','CategoryController@show');
 
-
-
-Route::get('post/{slug}','PostController@show');
-
 Route::group(['middleware' => 'auth'], function()
 {
     Route::get('post/create','PostController@create');
-    Route::post('post/create','PostController@store');
+    Route::post('post/store','PostController@store');
     Route::get('post/edit/{slug}','PostController@edit');
     Route::put('post/edit/{slug}','PostController@update');
     Route::delete('post/exterminate/{slug}','PostController@destroy');
 });
+
+Route::get('post/{slug}','PostController@show');
+
