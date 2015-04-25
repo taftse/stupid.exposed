@@ -49,8 +49,8 @@ class PostController extends Controller {
 	public function show($slug)
 	{
         $post = Post::where('slug', '=', $slug)->with('tags','comments')->firstOrFail();
-
-        return view('post.show',compact('post'));
+            dd($post->tags);
+        //return view('post.show',compact('post'));
 	}
 
 	/**

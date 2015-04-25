@@ -6,7 +6,7 @@ namespace SE;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Tags extends Model {
+class Tag extends Model {
 
     use SoftDeletes;
 
@@ -16,6 +16,7 @@ class Tags extends Model {
 
     public function posts()
     {
-        return $this->belongsToMany('SE\Post');
+        return $this->belongsToMany('SE\Post','post_tags','post_id','tag_id');
+
     }
 }

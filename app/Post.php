@@ -18,7 +18,7 @@ class Post extends Model {
 
     public function tags()
     {
-        return $this->belongsToMany('SE\Tags');
+        return $this->belongsToMany('SE\Tag','post_tags','tag_id','post_id');
     }
 
     public function  rateable()
