@@ -1,15 +1,24 @@
-<?php
-/**
- * Camelot Auth
-  *
- * @author Timothy Seebus <timothyseebus@tools4schools.org>
- * @license http://opensource.org/licences/MIT
- * @package CamelotAuth
- */
-
-namespace SE;
+<?php namespace SE;
 
 
-class Component {
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-} 
+class Component extends Model {
+
+    use SoftDeletes;
+
+    protected $table = 'components';
+
+    protected $guarded = ['id'];
+
+    public function post()
+    {
+        return $this->belongsTo('SE\Post');
+    }
+
+    public function postable()
+    {
+        return $this->morphTo();
+    }
+}

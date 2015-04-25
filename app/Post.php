@@ -11,6 +11,11 @@ class Post extends Model {
 
     protected $guarded = ['id'];
 
+    public function components()
+    {
+        return $this->hasMany('SE\Component');
+    }
+
     public function comments()
     {
         return $this->hasMany('SE\Comment');
@@ -26,8 +31,10 @@ class Post extends Model {
         return $this->morphMany('SE\Rating','rateable');
     }
 
-    protected function category()
+    public function category()
     {
         return $this->belongsTo('SE\Category');
     }
+
+
 }
