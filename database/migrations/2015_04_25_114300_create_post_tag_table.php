@@ -4,7 +4,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostTagsTable extends Migration {
+class CreatePostTagTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -13,12 +13,15 @@ class CreatePostTagsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('post_tags',function(Blueprint $table){
+		Schema::create('post_tag',function(Blueprint $table){
             $table->increments('id');
-            $table->integer('tag_id');
-            $table->integer('post_id');
+            $table->integer('post_id')->unsigned()->index();
+            $table->foreign('post_id')->refrences('id')->on('posts')->onDelete('cascade');
+            $table->integer('tag_id')->unsigned()->index();
+            $table->foreign('tag_id')->refrences('id')->on('tags')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
+
         });
 	}
 
@@ -29,7 +32,7 @@ class CreatePostTagsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('post_tags');
+		Schema::drop('post_tag');
 	}
 
 }
