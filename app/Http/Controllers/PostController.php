@@ -29,7 +29,6 @@ class PostController extends Controller {
 	 */
 	public function create()
 	{
-
 		return view('post.create');
 	}
 
@@ -57,7 +56,7 @@ class PostController extends Controller {
 	 */
 	public function show($slug)
 	{
-        $post = Post::where('slug', '=', $slug)->with('tags','comments')->first();
+        $post = Post::where('slug', '=', $slug)->with('component','tags','comments')->first();
 
         if($post == false)
         {
