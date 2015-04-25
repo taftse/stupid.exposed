@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Schema;
 
 class CreatePostsTable extends Migration {
 
@@ -12,7 +13,17 @@ class CreatePostsTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('posts',function(Blueprint $table){
+            $table->increments('id');
+            $table->string('uid');
+            $table->enum('post_type',['text,story,image,video']);
+            $table->integer('user_id');
+            $table->integer('category_id');
+            $table->text('post_data');
+            $table->integer('rating');
+            $table->timestamps();
+            $table->softDeletes();
+        });
 	}
 
 	/**
@@ -22,7 +33,7 @@ class CreatePostsTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('posts');
 	}
 
 }
