@@ -15,7 +15,7 @@ class PostController extends Controller {
 	 */
 	public function index($type = null)
 	{
-		//
+		echo 'show some form of list of posts';
 	}
 
 	/**
