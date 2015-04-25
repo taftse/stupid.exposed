@@ -25,4 +25,9 @@ class Post extends Model {
     {
         return $this->morphMany('App\Rating','rateable');
     }
+
+    protected function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
 }
