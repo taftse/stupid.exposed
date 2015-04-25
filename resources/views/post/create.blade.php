@@ -12,9 +12,9 @@
         </div>
 
 
-    @import('post/partial/form/_video');
-    @import('post/partial/form/_image');
-    @import('post/partial/form/_story');
+    @include('post/partials/form/_video');
+    @include('post/partials/form/_image');
+    @include('post/partials/form/_story');
 
 
     <div class="form-group">
