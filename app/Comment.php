@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace SE;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -16,12 +16,12 @@ class Comment extends Model {
 
     public function post()
     {
-        return $this->belongsTo('App\Post');
+        return $this->belongsTo('SE\Post');
     }
 
     public function  rateable()
     {
-        return $this->morphMany('App\Rating','rateable');
+        return $this->morphMany('SE\Rating','rateable');
     }
 
 }

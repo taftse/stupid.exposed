@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace SE;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -8,7 +8,7 @@ class Category extends Model {
 
     public function posts()
     {
-        return $this->hasMany('App\Post');
+        return $this->hasMany('SE\Post');
     }
 
 }

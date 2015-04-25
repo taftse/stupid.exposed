@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace SE;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -13,21 +13,21 @@ class Post extends Model {
 
     public function comments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('SE\Comment');
     }
 
     public function tags()
     {
-        return $this->belongsToMany('App\Tags');
+        return $this->belongsToMany('SE\Tags');
     }
 
     public function  rateable()
     {
-        return $this->morphMany('App\Rating','rateable');
+        return $this->morphMany('SE\Rating','rateable');
     }
 
     protected function category()
     {
-        return $this->belongsTo('App\Category');
+        return $this->belongsTo('SE\Category');
     }
 }
