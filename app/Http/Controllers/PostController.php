@@ -6,6 +6,8 @@ use SE\Http\Controllers\Controller;
 use SE\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use SE\Http\Requests\CreatePostRequest;
+use SE\Http\Requests\EditPostRequest;
 
 class PostController extends Controller {
 
@@ -27,6 +29,7 @@ class PostController extends Controller {
 	 */
 	public function create()
 	{
+
 		return view('post.create');
 	}
 
@@ -35,8 +38,14 @@ class PostController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreatePostRequest $request)
 	{
+        $input = $request->all();
+
+        $post = Post::create($input);
+
+
+        return redirect()->route('post',$post->slug)->with('message','Stupidity Detected');
 
 	}
 
@@ -48,9 +57,14 @@ class PostController extends Controller {
 	 */
 	public function show($slug)
 	{
-        $post = Post::where('slug', '=', $slug)->with('tags','comments')->firstOrFail();
-            dd($post->tags);
-        //return view('post.show',compact('post'));
+        $post = Post::where('slug', '=', $slug)->with('tags','comments')->first();
+
+        if($post == false)
+        {
+            return redirect()->route('posts');
+        }
+
+        return view('post.show',compact('post'));
 	}
 
 	/**
@@ -59,9 +73,11 @@ class PostController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($uid)
+	public function edit($slug)
 	{
-		//
+        $post = Post::where('slug', '=', $slug)->with('tags')->firstOrFail();
+
+        return view('post.edit');
 	}
 
 	/**
@@ -70,9 +86,9 @@ class PostController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($uid)
+	public function update(EditPostRequest $request, $uid)
 	{
-		//
+
 	}
 
 	/**
