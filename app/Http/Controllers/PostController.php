@@ -26,7 +26,7 @@ class PostController extends Controller {
 	 */
 	public function index($type = null)
 	{
-       // $posts = Post::all()->with('components')->get();
+        $posts = Post::where('id','!=','0')->with('components')->get();
         return view('post.index',compact('posts'));
 	}
 

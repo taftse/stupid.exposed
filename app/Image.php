@@ -8,7 +8,7 @@ class Image extends Model {
 
     use SoftDeletes;
 
-    protected $table = 'imagess';
+    protected $table = 'images';
 
     protected $guarded = ['id'];
 
