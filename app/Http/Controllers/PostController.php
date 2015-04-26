@@ -1,5 +1,8 @@
 <?php namespace SE\Http\Controllers;
 
+use Illuminate\Http\Response;
+use Illuminate\Http\ResponseTrait;
+use Illuminate\Support\Facades\App;
 use SE\Http\Requests;
 use SE\Http\Controllers\Controller;
 
@@ -11,6 +14,11 @@ use SE\Http\Requests\EditPostRequest;
 
 class PostController extends Controller {
 
+
+    public function __construct()
+    {
+
+    }
 	/**
 	 * Display a listing of the posts.
 	 *
@@ -18,7 +26,7 @@ class PostController extends Controller {
 	 */
 	public function index($type = null)
 	{
-
+       // $posts = Post::all()->with('components')->get();
         return view('post.index',compact('posts'));
 	}
 
@@ -56,12 +64,14 @@ class PostController extends Controller {
 	 */
 	public function show($slug)
 	{
-        $post = Post::where('slug', '=', $slug)->with('component','tags','comments')->first();
+
+        $post = Post::where('slug', '=', $slug)->with('tags','comments')->first();
 
         if($post == false)
         {
             return redirect()->route('posts');
         }
+
 
         return view('post.show',compact('post'));
 	}

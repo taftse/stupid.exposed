@@ -15,7 +15,7 @@ Route::get('post', function(){
 });
 
 // list all categories
-Route::get('categories',['as'=>'categories','use'=>'CategoryController@index']);
+Route::get('categories',['as'=>'categories','uses'=>'CategoryController@index']);
 
 Route::get('category', function(){
     return redirect()->route('categories');
@@ -44,5 +44,5 @@ Route::group([/*'middleware' => 'auth'*/], function()
     Route::delete('post/exterminate/{slug}','PostController@destroy');
 });
 
-Route::get('post/{slug}',['as'=>'post','use'=>'PostController@show']);
+Route::get('post/{slug}',['as'=>'post','uses'=>'PostController@show']);
 

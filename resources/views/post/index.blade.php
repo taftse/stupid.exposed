@@ -1,5 +1,5 @@
 @extends('app')
 
 @section('content')
-        {{ $post->title}}
+        {{ $post->title }}
 @endsection()
