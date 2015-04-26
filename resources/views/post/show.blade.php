@@ -10,7 +10,7 @@
         @elseif($component->postable instanceof SE\Image)
 
         @elseif($component->postable instanceof SE\Story)
-
+            @include('story/partials/_story')
         @endif
     @endforeach
 @endsection()

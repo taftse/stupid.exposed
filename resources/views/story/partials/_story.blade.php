@@ -1,0 +1,1 @@
+{{ $component->postable->story }}
