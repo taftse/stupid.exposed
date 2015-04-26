@@ -34,9 +34,10 @@ class ImageController extends Controller {
     {
         // are we downloading an image from another site?
         if($request->has('image_url'))
-        {
+        {   $fileInfo = pathinfo($request->get('image_url'));
+
             $imageFile = file_get_contents($request->get('image_url'));
-            $fileName = 'hgdjaSG.jpg';
+            $fileName = $fileInfo['basename'];
             $disk = Storage::disk('s3')->put($fileName, $imageFile);
         }
         // we are uploading an image
