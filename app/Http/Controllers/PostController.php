@@ -51,7 +51,7 @@ class PostController extends Controller {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  string  $uid
+	 * @param  string  $slug
 	 * @return Response
 	 */
 	public function show($slug)

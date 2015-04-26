@@ -26,12 +26,23 @@ Route::get('category/{category}','CategoryController@show');
 
 Route::group([/*'middleware' => 'auth'*/], function()
 {
+    Route::get('post/create/video','VideoController@create');
+    Route::post('post/create/video','VideoController@store');
+
+    Route::get('post/create/gallery','ImageController@create');
+    Route::post('post/create/gallery','ImageController@store');
+
+    Route::get('post/create/story','StoryController@create');
+    Route::post('post/create/story','StoryController@store');
+
     Route::get('post/create','PostController@create');
-    Route::post('post/create','PostController@store');
+
+    //Route::post('post/create','PostController@store');
+
     Route::get('post/edit/{slug}','PostController@edit');
     Route::put('post/edit/{slug}','PostController@update');
     Route::delete('post/exterminate/{slug}','PostController@destroy');
 });
 
-Route::get('post/{slug}','PostController@show');
+Route::get('post/{slug}',['as'=>'post','use'=>'PostController@show']);
 

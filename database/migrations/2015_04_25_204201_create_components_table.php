@@ -15,6 +15,7 @@ class CreateComponentsTable extends Migration {
 	{
 		Schema::create('components',function(Blueprint $table){
             $table->increments('id');
+            $table->integer('post_id')->nullable();
             $table->integer('postable_id');
             $table->string('postable_type');
             $table->timestamps();

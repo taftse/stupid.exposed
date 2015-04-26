@@ -12,7 +12,7 @@
         </div>
 
 
-    @include('post/partials/form/_video');
+
     @include('post/partials/form/_image');
     @include('post/partials/form/_story');
 

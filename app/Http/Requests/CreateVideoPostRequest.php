@@ -2,7 +2,7 @@
 
 use SE\Http\Requests\Request;
 
-class CreatePostRequest extends Request {
+class CreateVideoPostRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,7 +22,9 @@ class CreatePostRequest extends Request {
 	public function rules()
 	{
 		return [
-			'title' =>'required',
+            'title'    => 'required',
+            'url'           => 'required',
+            //'description'   => 'required',
 
 		];
 	}

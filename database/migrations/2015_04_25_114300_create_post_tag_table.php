@@ -16,13 +16,16 @@ class CreatePostTagTable extends Migration {
 		Schema::create('post_tag',function(Blueprint $table){
             $table->increments('id');
             $table->integer('post_id')->unsigned()->index();
-            $table->foreign('post_id')->refrences('id')->on('posts')->onDelete('cascade');
             $table->integer('tag_id')->unsigned()->index();
-            $table->foreign('tag_id')->refrences('id')->on('tags')->onDelete('cascade');
+
             $table->timestamps();
             $table->softDeletes();
 
+
+
         });
+
+
 	}
 
 	/**
@@ -32,6 +35,7 @@ class CreatePostTagTable extends Migration {
 	 */
 	public function down()
 	{
+
 		Schema::drop('post_tag');
 	}
 

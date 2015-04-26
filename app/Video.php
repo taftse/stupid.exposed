@@ -15,7 +15,7 @@ class Video extends Model {
 
     public function components()
     {
-        return $this->morphMany('SM\Component','postable');
+        return $this->morphMany('SE\Component','postable');
     }
 
 } 

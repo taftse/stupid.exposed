@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 
 class Post extends Model {
 
@@ -13,12 +14,12 @@ class Post extends Model {
 
     public function components()
     {
-        return $this->hasMany('SE\Component')->withTimestamps();
+        return $this->hasMany('SE\Component');
     }
 
     public function comments()
     {
-        return $this->hasMany('SE\Comment')->withTimestamps();
+        return $this->hasMany('SE\Comment');
     }
 
     public function tags()
@@ -28,17 +29,23 @@ class Post extends Model {
 
     public function  rateable()
     {
-        return $this->morphMany('SE\Rating','rateable')->withTimestamps();
+        return $this->morphMany('SE\Rating','rateable');
     }
 
     public function category()
     {
-        return $this->belongsTo('SE\Category')->withTimestamps();
+        return $this->belongsTo('SE\Category');
     }
 
     public function user()
     {
-        return $this->belongsTo('SE\User')->withTimestamps();
+        return $this->belongsTo('SE\User');
     }
 
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title'] = $value;
+
+        $this->attributes['slug'] = Str::slug($value,'-');
+    }
 }
