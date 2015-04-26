@@ -2,6 +2,9 @@
 
 @section('content')
     @foreach($posts as $post)
-        {{ $posts->title }}
+
+        {!! link_to_route('post', $post->title, $post->slug) !!}
+    <br/>
+
     @endforeach
 @endsection()

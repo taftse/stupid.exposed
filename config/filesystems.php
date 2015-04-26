@@ -50,10 +50,10 @@ return [
 
 		's3' => [
 			'driver' => 's3',
-			'key'    => 'AKIAJYXXRMVR2LS3DTUA',
-			'secret' => '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',
-			'region' => 'eu-west-1',
-			'bucket' => 'cdn.stupid.exposed',
+			'key'    => env('S3_KEY', ''),
+			'secret' => env('S3_SECRET', ''),
+			'region' => env('S3_REGION', ''),
+			'bucket' => env('S3_BUCKET', ''),
 		],
 
 		'rackspace' => [
