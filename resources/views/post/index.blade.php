@@ -1,10 +1,9 @@
 @extends('app')
 
 @section('content')
+    <div class="container">
     @foreach($posts as $post)
-
-        {!! link_to_route('post', $post->title, $post->slug) !!}
-    <br/>
-
+        @include('post.partials.post', ['post' => $post])
     @endforeach
+    </div>
 @endsection()

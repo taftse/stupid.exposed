@@ -1,1 +1,1 @@
-<img src="http://cdn.stupid.exposed/{{$component->postable->url}}" alt="" style="max-width: 1280px">
+<img src="http://cdn.stupid.exposed/{{$component->postable->url}}" alt="" class="post-image">
