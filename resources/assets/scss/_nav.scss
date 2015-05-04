@@ -1,0 +1,45 @@
+body > header {
+    background-color: #5082E5;
+    color: white;
+    padding: 0.25em, 0.5em;
+
+    nav {
+        width: 100%;
+        display: flex;
+
+        justify-content: space-between;
+
+        .nav-left {
+        }
+
+        .nav-center {
+        }
+
+        .nav-right {
+        }
+
+        ul {
+            display: flex;
+            padding: 0;
+            list-style: none;
+
+            li {
+                padding: 0 0.5em;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    background-color: rgba(black, 0.2);
+                    padding: 0.25em 0.5em;
+                    border-radius: 25px;
+
+                }
+
+                a:hover {
+                    background-color: darker(#5082E5, 10%);
+                }
+            }
+        }
+
+    }
+}
