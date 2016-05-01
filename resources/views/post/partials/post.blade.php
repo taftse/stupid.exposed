@@ -4,7 +4,8 @@
             <img src="http://www.placecage.com/200/200" class="user-profile" />
         </div>
         <div class="title">
-            {{ $post->title }}
+            <li><a href="{{ url('/post/'.$post->slug ) }}">{{ $post->title }}</a></li>
+
         </div>
     </header>
     <div class="content">

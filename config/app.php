@@ -146,6 +146,11 @@ return [
 		'SE\Providers\EventServiceProvider',
 		'SE\Providers\RouteServiceProvider',
 
+		/*
+		 * Third party plugins
+		 */
+		'Baum\Providers\BaumServiceProvider',
+
 	],
 
 	/*

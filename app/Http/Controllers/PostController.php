@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\View;
 use SE\Http\Requests\CreatePostRequest;
 use SE\Http\Requests\EditPostRequest;
 
+
 class PostController extends Controller {
 
 
@@ -26,7 +27,7 @@ class PostController extends Controller {
 	 */
 	public function index($type = null)
 	{
-        $posts = Post::where('id','!=','0')->with('components')->get();
+        $posts = Post::where('id','!=','0')->orderBy('rating', 'desc')->with('components')->get();
         return view('post.index',compact('posts'));
 	}
 
@@ -65,13 +66,14 @@ class PostController extends Controller {
 	public function show($slug)
 	{
 
-        $post = Post::where('slug', '=', $slug)->with('tags','comments')->first();
+        $post = Post::where('slug', '=', $slug)->with('tags','components','comments')->first();
 
         if($post == false)
         {
             return redirect()->route('posts');
         }
 
+		$post['comments']->toHierarchy();
 
         return view('post.show',compact('post'));
 	}

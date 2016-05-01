@@ -1,4 +1,4 @@
-<header>
+<header id="header">
     <nav>
         <div class="nav-left">
             <ul>

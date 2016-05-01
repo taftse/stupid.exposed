@@ -3,6 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
+use SKE\Comments\Traits\Commentable;
 
 class Post extends Model {
 
@@ -19,7 +20,7 @@ class Post extends Model {
 
     public function comments()
     {
-        return $this->hasMany('SE\Comment');
+        return $this->morphMany('SKE\Comments\Models\Comment', 'commentable')->orderBy('lft');
     }
 
     public function tags()

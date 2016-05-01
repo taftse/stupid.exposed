@@ -1,5 +1,10 @@
 <?php
 
+Event::listen('illuminate.query', function($query)
+{
+    var_dump($query);
+});
+
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
@@ -14,15 +19,7 @@ Route::get('post', function(){
     return redirect()->route('posts');
 });
 
-// list all categories
-Route::get('categories',['as'=>'categories','uses'=>'CategoryController@index']);
 
-Route::get('category', function(){
-    return redirect()->route('categories');
-});
-
-// list all posts belonging to a category
-Route::get('category/{category}','CategoryController@show');
 
 Route::group([/*'middleware' => 'auth'*/], function()
 {
@@ -44,5 +41,20 @@ Route::group([/*'middleware' => 'auth'*/], function()
     Route::delete('post/exterminate/{slug}','PostController@destroy');
 });
 
+Route::get('post/{slug}/comments','CommentController@show');
 Route::get('post/{slug}',['as'=>'post','uses'=>'PostController@show']);
 
+
+
+// list all categories
+Route::get('categories',['as'=>'categories','uses'=>'CategoryController@index']);
+
+Route::get('category', function(){
+    return redirect()->route('categories');
+});
+
+// list all posts belonging to a category
+Route::get('category/{category}','CategoryController@show');
+
+
+Route::post('comment','CommentController@store');

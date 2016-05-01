@@ -1,5 +1,10 @@
 @extends('app')
 
 @section('content')
-    @include('posts.partials.post')
+    <div class="container">
+    @include('post.partials.post', ['post' => $post])
+    @include('comment.partials.show',['comments' =>$post->comments])
+
+    </div>
+
 @endsection()
