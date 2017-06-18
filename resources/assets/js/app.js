@@ -17,6 +17,18 @@ window.Vue = require('vue');
 
 Vue.component('example', require('./components/Example.vue'));
 
+Vue.component('se-rating',{
+    template: '#ratings-template',
+
+    props:{
+        'rateable_type':String,
+        'rateable_id':String,
+        'value':null,
+        'disabled':Boolean
+    }
+});
+
+
 const app = new Vue({
     el: '#app'
 });
