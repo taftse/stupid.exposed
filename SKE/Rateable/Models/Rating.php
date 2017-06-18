@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 
-class Rating extends Model {
+class Rating extends Model
+{
     use SoftDeletes;
 
     protected $table = 'ratings';
@@ -38,6 +39,6 @@ class Rating extends Model {
      */
     public function user()
     {
-        return $this->belongsTo(Config::get('auth.model'));
+        return $this->belongsTo(\Config::get('auth.model'));
     }
-} 
+}

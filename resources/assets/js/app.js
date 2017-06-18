@@ -1,127 +1,22 @@
+
 /**
- * Created by Timothy on 01/05/2016.
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
  */
-Vue.component('se-rating',{
-    template: '#ratings-template',
 
-    props:{
-        'rateable_type':String,
-        'rateable_id':String,
-        'value':null,
-        'disabled':Boolean
-    },
+require('./bootstrap');
+
+window.Vue = require('vue');
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+Vue.component('example', require('./components/Example.vue'));
+
+const app = new Vue({
+    el: '#app'
 });
-
-new Vue({
-    el: 'body'
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-window.$ = window.jQuery = require('jquery')
-require('jquery-bar-rating');
-
-$(document).ready(function() {
-
-    $(".br-widget a").change(function () {
-        var color = 'blue';
-        switch ($('.br-active').length) {
-            case 1, 0:
-                color = 'blue';
-                break;
-            case 2:
-                color = 'green';
-                break;
-            case 3:
-                color = 'yellow';
-                break;
-            case 4:
-                color = 'orange';
-                break;
-            case 5:
-                color = 'red';
-                break;
-        }
-
-        $(this).addClass("stupidity-rating-color-".color);
-        alert("Handler for .change() called.");
-    })
-    $(".br-widget a").hover(function () {
-        var color = 'blue';
-        switch ($('.br-active').length) {
-            case 1, 0:
-                color = 'blue';
-                break;
-            case 2:
-                color = 'green';
-                break;
-            case 3:
-                color = 'yellow';
-                break;
-            case 4:
-                color = 'orange';
-                break;
-            case 5:
-                color = 'red';
-                break;
-        }
-
-
-        $(".br-active").addClass("stupidity-rating-color-"+color);
-        $(".br-current-rating").addClass("stupidity-rating-color-"+color);
-
-    },function()
-    {
-        var color = 'blue';
-        switch ($('.br-active').length) {
-            case 1, 0:
-                color = 'blue';
-                break;
-            case 2:
-                color = 'green';
-                break;
-            case 3:
-                color = 'yellow';
-                break;
-            case 4:
-                color = 'orange';
-                break;
-            case 5:
-                color = 'red';
-                break;
-        }
-
-
-        $(".br-active").removeClass("stupidity-rating-color-"+color);
-        $(".br-current-rating").removeClass("stupidity-rating-color-"+color);
-    })
-
-});
-
-
-*/

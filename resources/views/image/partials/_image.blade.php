@@ -1,1 +1,0 @@
-<img src="http://cdn.stupid.exposed/{{$component->postable->url}}" alt="" class="post-image">
