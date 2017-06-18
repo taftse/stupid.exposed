@@ -9,6 +9,7 @@ use SKE\Comments\Traits\Commentable;
 use SKE\Rateable\Traits\Rateable;
 use SKE\Tags\Models\Tag;
 
+
 class Post extends Model {
 
     use SoftDeletes;
