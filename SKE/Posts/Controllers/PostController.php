@@ -1,16 +1,10 @@
-<?php namespace SKE\Posts\Controllers
+<?php namespace SKE\Posts\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
-use Illuminate\Http\ResponseTrait;
-use Illuminate\Support\Facades\App;
-use APP\Http\Requests;
-use APP\Http\Controllers\Controller;
-
-use SKE\Posts\Models\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
-use SE\Http\Requests\CreatePostRequest;
-use SE\Http\Requests\EditPostRequest;
+use SKE\Posts\Models\Post;
+use SKE\Posts\Requests\EditPostRequest;
 
 
 class PostController extends Controller
@@ -43,7 +37,7 @@ class PostController extends Controller
      *
      * @return Response
      */
-    public function store(CreatePostRequest $request)
+    public function store(Request $request)
     {
         $input = $request->all();
 
