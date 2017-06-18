@@ -19,7 +19,7 @@ class Post extends Model {
 
     public function components()
     {
-        return $this->hasMany('SE\Component');
+        return $this->hasMany(Component::class);
     }
 
     public function tags()
