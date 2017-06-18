@@ -1,4 +1,4 @@
-{!! Form::open(['action'=>'CommentController@store','id'=>'comment_form']) !!}
+{!! Form::open(['action'=>'\SKE\Comments\Controllers\CommentController@store','id'=>'comment_form']) !!}
 {!! Form::hidden('post_id',$post->id) !!}
 {!! Form::hidden('parent_id','6') !!}
 <div class="form-group">
