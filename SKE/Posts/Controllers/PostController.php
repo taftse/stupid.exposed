@@ -19,9 +19,6 @@ class PostController extends Controller
     public function index($type = null)
     {
         $posts = Post::where('id','!=','0')->orderBy('rating', 'desc')->with('components')->get();
-        
-        $ratings['average'] = $posts->averageRating();
-        $posts['ratings'] = $ratings;
         return view('post.index',compact('posts'));
     }
 
