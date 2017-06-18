@@ -30,13 +30,13 @@ Route::group([/*'middleware' => 'auth'*/], function()
     Route::put('post/edit/{slug}','\SKE\Posts\Controllers\PostController@update');
     Route::delete('post/exterminate/{slug}','\SKE\Posts\Controllers\PostController@destroy');
 });
-Route::get('post/{slug}/comments','CommentController@show');
+Route::get('post/{slug}/comments','\SKE\Comments\Controllers\CommentController@show');
 Route::get('post/{slug}',['as'=>'post','uses'=>'\SKE\Posts\Controllers\PostController@show']);
 // list all categories
-Route::get('categories',['as'=>'categories','uses'=>'CategoryController@index']);
+Route::get('categories',['as'=>'categories','uses'=>'\SKE\Categories\Controllers\CategoryController@index']);
 Route::get('category', function(){
     return redirect()->route('categories');
 });
 // list all posts belonging to a category
-Route::get('category/{category}','CategoryController@show');
-Route::post('comment','CommentController@store');
+Route::get('category/{category}','\SKE\Categories\Controllers\CategoryController@show');
+Route::post('comment','\SKE\Comments\Controllers\CommentController@store');

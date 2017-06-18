@@ -4,8 +4,10 @@ use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
+use SKE\Categories\Models\Category;
 use SKE\Comments\Traits\Commentable;
 use SKE\Rateable\Traits\Rateable;
+use SKE\Tags\Models\Tag;
 
 class Post extends Model {
 
@@ -24,13 +26,13 @@ class Post extends Model {
 
     public function tags()
     {
-        return $this->belongsToMany('SE\Tag')->withTimestamps();
+        return $this->belongsToMany(Tag::class)->withTimestamps();
     }
 
 
     public function category()
     {
-        return $this->belongsTo('SE\Category');
+        return $this->belongsTo(Category::class);
     }
 
     public function user()
