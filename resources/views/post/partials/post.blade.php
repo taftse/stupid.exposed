@@ -10,11 +10,11 @@
     </header>
     <div class="content">
         @foreach($post->components as $component)
-            @if($component->postable instanceof SE\Video )
+            @if($component->postable instanceof SKE\Posts\Models\Video )
                 @include('video.partials._video')
-            @elseif($component->postable instanceof SE\Image)
+            @elseif($component->postable instanceof SKE\Posts\Models\Image)
                 @include('image.partials._image')
-            @elseif($component->postable instanceof SE\Story)
+            @elseif($component->postable instanceof SKE\Posts\Models\Story)
                 @include('story.partials._story')
             @endif
         @endforeach
