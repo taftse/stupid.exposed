@@ -15,14 +15,16 @@ class CreateRatingsTable extends Migration {
 	{
 		Schema::create('ratings',function(Blueprint $table){
             $table->increments('id');
-            $table->string('rateable_type');
-            $table->integer('rateable_id');
-            $table->integer('user_id');
+			$table->morphs('rateable');
+            $table->integer('user_id')->index();
             $table->integer('rating');
             $table->timestamps();
             $table->softDeletes();
+			$table->index('rateable_id');
+			$table->index('rateable_type');
         });
 	}
+
 
 	/**
 	 * Reverse the migrations.

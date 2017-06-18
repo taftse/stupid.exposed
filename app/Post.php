@@ -4,10 +4,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use SKE\Comments\Traits\Commentable;
+use SKE\Rateable\Traits\Rateable;
 
 class Post extends Model {
 
     use SoftDeletes;
+    use Commentable;
+    use Rateable;
 
     protected $table = 'posts';
 
@@ -18,20 +21,11 @@ class Post extends Model {
         return $this->hasMany('SE\Component');
     }
 
-    public function comments()
-    {
-        return $this->morphMany('SKE\Comments\Models\Comment', 'commentable')->orderBy('lft');
-    }
-
     public function tags()
     {
         return $this->belongsToMany('SE\Tag')->withTimestamps();
     }
 
-    public function  rateable()
-    {
-        return $this->morphMany('SE\Rating','rateable');
-    }
 
     public function category()
     {

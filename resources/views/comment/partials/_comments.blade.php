@@ -10,3 +10,9 @@
     @endif
 
 @endforeach
+
+
+@section('scripts')
+    @parent
+
+@stop

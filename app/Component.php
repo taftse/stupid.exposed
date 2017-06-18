@@ -22,3 +22,4 @@ class Component extends Model {
         return $this->morphTo();
     }
 }
+

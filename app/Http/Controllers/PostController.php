@@ -66,7 +66,7 @@ class PostController extends Controller {
 	public function show($slug)
 	{
 
-        $post = Post::where('slug', '=', $slug)->with('tags','components','comments')->first();
+        $post = Post::where('slug', '=', $slug)->with('tags','components','comments','ratings')->first();
 
         if($post == false)
         {
@@ -74,6 +74,10 @@ class PostController extends Controller {
         }
 
 		$post['comments']->toHierarchy();
+		$ratings['total_votes'] = count($post->ratings);
+		$ratings['average'] = $post->averageRating();
+		$post['ratings'] = $ratings;
+
 
         return view('post.show',compact('post'));
 	}
@@ -88,7 +92,7 @@ class PostController extends Controller {
 	{
         $post = Post::where('slug', '=', $slug)->with('tags')->firstOrFail();
 
-        return view('post.edit');
+        return view('post.edit',compact('post'));
 	}
 
 	/**

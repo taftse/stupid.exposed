@@ -28,7 +28,8 @@ class CommentController extends Controller {
         // if the comment is a reply
         if (isset($input['parent_id']) && !empty($input['parent_id']) ) {
             $parent = Comment::findOrFail($input['parent_id']);
-            
+            $comment->commentable_id = $parent->commentable_id;
+            $comment->commentable_type = $parent->commentable_type;
             $comment->save();
             $comment->makeChildOf($parent);
             return 'child success';

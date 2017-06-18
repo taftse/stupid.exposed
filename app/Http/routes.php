@@ -2,7 +2,7 @@
 
 Event::listen('illuminate.query', function($query)
 {
-    var_dump($query);
+    //var_dump($query);
 });
 
 Route::get('home', 'HomeController@index');

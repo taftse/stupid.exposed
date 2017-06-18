@@ -36,16 +36,39 @@
                     <i class="fa fa-share"></i>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="align-right">
+                <se-rating value="{{round($post->ratings['average'],0,PHP_ROUND_HALF_DOWN)}}"></se-rating>
+               <!-- <select id="Stupidity-rating" >
+                    <option value="1">Not stupid</option>
+                    <option value="2">Getting Warmer</option>
+                    <option value="3">Stupid</option>
+                    <option value="4">Really Stupid</option>
+                    <option value="5">WTF were you thinking!</option>
+                </select>
+               <!--<a href="#">
                     <i class="fa fa-heartbeat"></i>
-                </a>
+                </a>-->
             </li>
         </ul>
         <ul class="meta">
             <li class="votes">
-                3,141 votes total
+                {{$post->ratings['total_votes']}} votes total
             </li>
         </ul>
     </footer>
 </section>
+@include('ratings.ratings')
+
+
+@section('scripts')
+    @parent
+
+    <!--<script type="text/javascript">
+
+        $('#Stupidity-rating').barrating({
+            theme: 'bars-movie',
+            initialRating:'',
+        });
+
+    </script>-->
+@stop
