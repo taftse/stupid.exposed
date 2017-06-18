@@ -64,7 +64,7 @@ class PostController extends Controller
             return redirect()->route('posts');
         }
 
-        $post['comments']->toHierarchy();
+        //$post['comments']->toHierarchy();
         $ratings['total_votes'] = count($post->ratings);
         $ratings['average'] = $post->averageRating();
         $post['ratings'] = $ratings;
