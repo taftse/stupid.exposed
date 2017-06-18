@@ -40,3 +40,7 @@ Route::get('category', function(){
 // list all posts belonging to a category
 Route::get('category/{category}','\SKE\Categories\Controllers\CategoryController@show');
 Route::post('comment','\SKE\Comments\Controllers\CommentController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
