@@ -57,7 +57,7 @@ class PostController extends Controller
     public function show($slug)
     {
 
-        $post = Post::where('slug', '=', $slug)->with('tags','components','comments','ratings')->first();
+        $post = Post::where('slug', '=', $slug)->with('components','comments','ratings')->first();
 
         if($post == false)
         {
