@@ -10,7 +10,7 @@ Event::listen('illuminate.query', function($query)
 Auth::routes();
 
 
-Route::get('home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
 // list all posts
 Route::get('posts',['as' => 'posts', 'uses' =>'\SKE\Posts\Controllers\PostController@index']);
 Route::get('post', function(){
@@ -41,6 +41,6 @@ Route::get('category', function(){
 Route::get('category/{category}','\SKE\Categories\Controllers\CategoryController@show');
 Route::post('comment','\SKE\Comments\Controllers\CommentController@store');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
