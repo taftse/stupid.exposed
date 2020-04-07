@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use SKE\Posts\Models\Post;
+use SKE\Posts\Policies\PostPolicy;
+use SKE\Users\Models\User;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -14,6 +17,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
+        //User::class => UserPolicy
+        Post::class => PostPolicy::class,
     ];
 
     /**
