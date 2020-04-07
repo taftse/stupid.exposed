@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <post v-for="post in posts" v-bind:key="post.id" :post="post"></post>
     </div>
 </template>
 
@@ -14,7 +14,7 @@
             getInitialPosts(){
                 axios.get('posts')
                 .then(response =>{
-                    this.posts.push(response.data.posts);
+                    this.posts.push(...response.data.data);
                 });
             }
         },

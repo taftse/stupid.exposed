@@ -4,7 +4,7 @@ namespace SKE\Posts\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use SKE\Components\Http\Resources\ComponentResource;
-use SKE\User\Http\Resources\AuthorResource;
+use SKE\Users\Http\Resources\AuthorResource;
 
 class PostResource extends JsonResource
 {
@@ -16,6 +16,7 @@ class PostResource extends JsonResource
      */
     public function toArray($request)
     {
+        dd($this->author);
         return [
             'id' =>$this->id,
             'slug' => $this->slug,

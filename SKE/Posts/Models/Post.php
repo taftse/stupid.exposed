@@ -9,6 +9,8 @@ use SKE\Users\Models\User;
 class Post extends Model
 {
 
+    protected $with = ['components','author'];
+
     public function components()
     {
         return $this->hasMany(Component::class);
