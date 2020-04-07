@@ -4,7 +4,7 @@ namespace SKE\Users\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AuthorResource extends JsonResource
+class UserResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,6 +17,9 @@ class AuthorResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'email' => $this->email,
+            'created_at' =>$this->created_at,
+            'updated_at' => $this->updated_at,
             'link' =>[
                 'self' => route('user.show',$this->id),
             ],

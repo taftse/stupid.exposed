@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::apiResource('posts',"\SKE\Posts\Http\Controllers\API\PostController");
+Route::apiResource('user',"\SKE\Users\Http\Controllers\API\UserController");
+Route::get('me',"\SKE\Users\Http\Controllers\API\MeController@show");
