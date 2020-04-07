@@ -1,1 +1,0 @@
-<iframe class="post-video" src="https://player.vimeo.com/video/{{$component->postable->url}}" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

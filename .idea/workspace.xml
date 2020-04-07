@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="433c99fb-f349-4fd4-85d3-544c65623cf2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Home/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Dropdown/DropdownMenu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Dropdown/DropdownTrigger.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/spa.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Categories/Models/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Comments/Controllers/CommentController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Comments/Models/Comment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Comments/Request/CommentRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Comments/Traits/Commentable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Posts/Controllers/PostController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Posts/Models/Component.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Posts/Models/Image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Posts/Models/Post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Posts/Models/Story.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Posts/Models/Video.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Posts/Request/EditPostRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Rateable/Models/Rating.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Rateable/Traits/Rateable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SKE/Tags/Models/tag.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/app.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_14_230116_create_posts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_14_230148_create_tags_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_14_230201_create_comments_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_25_114300_create_post_tag_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_25_114354_create_ratings_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_25_161002_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_25_203540_create_videos_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_25_204201_create_components_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_25_204855_create_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2015_04_25_205228_create_stories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/mixins/Translation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/js/components/Example.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/app.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/alerts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/badges.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/bootstrap.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/breadcrumbs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/button-groups.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/buttons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/carousel.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/close.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/code.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/component-animations.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/dropdowns.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/forms.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/glyphicons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/grid.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/input-groups.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/jumbotron.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/labels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/list-group.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/media.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/alerts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/background-variant.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/border-radius.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/buttons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/center-block.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/clearfix.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/forms.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/gradients.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/grid-framework.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/grid.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/hide-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/image.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/labels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/list-group.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/nav-divider.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/nav-vertical-align.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/opacity.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/pagination.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/panels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/progress-bar.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/reset-filter.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/resize.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/responsive-visibility.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/size.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/tab-focus.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/table-row.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/text-emphasis.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/text-overflow.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/vendor-prefixes.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/modals.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/navbar.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/navs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/normalize.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/pager.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/pagination.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/panels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/popovers.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/print.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/progress-bars.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/responsive-embed.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/responsive-utilities.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/scaffolding.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/tables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/thumbnails.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/tooltip.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/type.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/utilities.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/wells.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/sass/_base.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/sass/_content.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/sass/_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/sass/_profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/sass/_rating.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/sass/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comment/partials/_child_comments.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comment/partials/_comment.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comment/partials/_comments.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comment/partials/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comment/partials/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/image/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/image/partials/_image.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/_google_analytics.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/partials/Form/_image.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/partials/Form/_story.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/partials/post.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ratings/ratings.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/story/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/story/partials/_story.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video/partials/_video.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video/partials/_vimeo.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video/partials/_youtube.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video/partials/form/_video.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="stupid.exposed" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="Less File" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Zvw9hGy5WIkwKpOLewmDhKmj88" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="P:\Program Files\nodejs\node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="Less" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="P:\PHPDEV\stupid.exposed\resources\views\layouts" />
+      <recent name="P:\PHPDEV\stupid.exposed\public" />
+      <recent name="P:\PHPDEV\stupid.exposed\resources\assets\sass" />
+      <recent name="P:\PHPDEV\stupid.exposed\resources\assets\less" />
+      <recent name="P:\PHPDEV\stupid.exposed\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\PHPDEV\stupid.exposed" />
+      <recent name="P:\PHPDEV\stupid.exposed\SKE\Rateable\Traits" />
+      <recent name="P:\PHPDEV\stupid.exposed\SKE\Comments\Models" />
+      <recent name="P:\PHPDEV\stupid.exposed\SKE\Rateable\Models" />
+      <recent name="P:\PHPDEV\stupid.exposed\SKE\comments\models" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="433c99fb-f349-4fd4-85d3-544c65623cf2" name="Default" comment="" />
+      <created>1461255306755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1461255306755</updated>
+      <workItem from="1461255308145" duration="8870000" />
+      <workItem from="1461499392991" duration="3984000" />
+      <workItem from="1461593141838" duration="44717000" />
+      <workItem from="1462605479904" duration="8082000" />
+      <workItem from="1463165215861" duration="581000" />
+      <workItem from="1463239869153" duration="2438000" />
+      <workItem from="1463856603438" duration="1213000" />
+      <workItem from="1465219606810" duration="622000" />
+      <workItem from="1465744351867" duration="2621000" />
+      <workItem from="1470254833839" duration="635000" />
+      <workItem from="1470572947241" duration="1181000" />
+      <workItem from="1470575242070" duration="949000" />
+      <workItem from="1497793316261" duration="12572000" />
+      <workItem from="1585732728541" duration="1949000" />
+      <workItem from="1585823684605" duration="18155000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="795" y="444" key="NewPhpFileDialog" timestamp="1586199368950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="795" y="444" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1586199368950" />
+    <state x="655" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1585945852376">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="345" key="com.intellij.ide.util.TipDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1585945852376" />
+    <state x="1920" y="0" width="1425" height="1025" key="dock-window-1" timestamp="1586245812914">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="0" width="1425" height="1025" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1586245812914" />
+    <state x="1912" y="-8" width="1425" height="1025" maximized="true" key="dock-window-2" timestamp="1586268847579">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1912" y="-8" width="1425" height="1025" maximized="true" key="dock-window-2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1586268847579" />
+  </component>
+</project>
