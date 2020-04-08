@@ -31,11 +31,11 @@
                                         <img class="h-12 w-12" src="{{asset('img/logo_transparent_bg.png')}}" alt="STUPID.EXPOSED logo">
                                     </div>
                                     <div class="ml-10 flex items-baseline">
-                                        <router-link class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</router-link>
-                                        <router-link class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Hot</router-link>
-                                        <router-link class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Catagories</router-link>
-                                        <router-link class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Latest</router-link>
-                                        <router-link class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Random</router-link>
+                                        <router-link :to="{name:'posts.index'}" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</router-link>
+                                        <router-link :to="{name:'posts.index',props:{filter:'hot'}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Hot</router-link>
+                                        <router-link :to="{name:'Categories'}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Categories</router-link>
+                                        <router-link :to="{name:'posts.index',props:{filter:'latest'}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Latest</router-link>
+                                        <router-link :to="{name:'posts.random'}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Random</router-link>
                                     </div>
                                 </div>
                                 <div class="ml-6 flex items-center">

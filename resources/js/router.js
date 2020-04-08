@@ -21,24 +21,28 @@ export default  new VueRouter(
                 component: Home
             },
             {
-                path:'/posts/',
+                path:'/posts/:filter?',
                 name: 'posts',
-                component: Posts
+                component: Posts,
+                props: true
             },
             {
-                path:'/post/:id/:slug?',
+                path:'/post/:postId/:slug?',
                 name: 'post.show',
-                component: ShowPost
+                component: ShowPost,
+                props: true
             },
             {
-                path:'/post/:id/edit',
+                path:'/post/:postId/edit',
                 name: 'post.edit',
-                component: EditPost
+                component: EditPost,
+                props: true
             },
             {
                 path:'/author/:id/',
                 name: 'author.show',
-                component: ShowAuthor
+                component: ShowAuthor,
+                props: true
             },
         ]
     }
