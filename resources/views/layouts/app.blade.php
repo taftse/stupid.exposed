@@ -8,9 +8,12 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        <link rel="search" type="application/opensearchdescription+xml" href="/osd.xml" title="Stupid.Exposed">
+
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <script src="{{mix('js/app.js')}}" defer></script>
+        <script src="{{route('translations',app()->getLocale())}}" ></script>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,7 +23,7 @@
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div id="app">
+        <div id="app" class="bg-gray-200">
             <header class="hidden lg:block bg-gray-800 pb-32">
                 <nav class="bg-gray-800">
                     <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -80,19 +83,18 @@
                         </div>
                     </div>
                 </nav>
-                <div class="py-10">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h1 class="text-3xl leading-9 font-bold text-white">
-                            Dashboard
-                        </h1>
-                    </div>
-                </div>
+
             </header>
-            <main class="-mt-32">
-                <div class="max-w-7xl mx-auto pb-12 px4 sm:px-6 lg:px-8">
-                    <div class="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
-                        <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
-                        @yield('content')
+            <main class="pt-5 md:-mt-32">
+                <div class="max-w-7xl pb-12 px4 sm:px-6 lg:px-8 object-right">
+                    <div class="mx-auto flex" >
+                        <div class="hidden lg:block max-w-2xl w-1/6">
+                        </div>
+                        <div class="w-full  md:max-w-6x1 w-4/6">
+                            @yield('content')
+                        </div>
+                        <div class="hidden lg:block w-1/4 max-w-2xl">
+                           <!-- adds section -->
                         </div>
                     </div>
                 </div>
@@ -104,8 +106,8 @@
             </footer>
         </div>
     </body>
-
-
-
-
 </html>
+
+<script>
+    window.config = @json(['translations'=>['test','test']]);
+</script>
