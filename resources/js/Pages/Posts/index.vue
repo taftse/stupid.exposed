@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <post v-for="post in posts" v-bind:key="post.id" :post="post"></post>
+    <div class="max-w-7x1 mx-auto py6 sm:px-6 lg:px-8">
+        <div class="max-w-none mx-auto">
+            <post-preview v-for="post in posts" v-bind:key="post.id" :post="post"></post-preview>
+        </div>
     </div>
 </template>
 
