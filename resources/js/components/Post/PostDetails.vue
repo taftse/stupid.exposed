@@ -8,6 +8,7 @@
         <div class="ml-16 border border-gray-400 mb-4 bg-white">
 
             <div v-for="component in post.components">
+
                 <component :is="component.type+'-component'" :component="component"></component>
             </div>
         </div>
