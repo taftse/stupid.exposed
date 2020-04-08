@@ -10,7 +10,7 @@ use SKE\Users\Models\User;
 class Post extends Model
 {
 
-    protected $with = ['components','author'];
+    protected $with = ['author','components',];
 
     public function components()
     {
@@ -19,7 +19,7 @@ class Post extends Model
 
     public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id');
     }
 
     public function setTitleAttribute($value)
