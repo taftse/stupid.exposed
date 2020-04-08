@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('osd.xml',function (){
+    return 'test';
+});
+Route::get('language/{local}',[\SKE\Language\Http\Controllers\LanguageController::class,'handle'])->name('translations');
+
 Route::view('{any?}', 'spa')->where('any', '.*')->name('home');
 
 
