@@ -39,7 +39,7 @@ export default  new VueRouter(
                 props: true
             },
             {
-                path:'/author/:id/',
+                path:'/author/:authorId/',
                 name: 'author.show',
                 component: ShowAuthor,
                 props: true
