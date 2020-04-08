@@ -16,7 +16,6 @@ class PostResource extends JsonResource
      */
     public function toArray($request)
     {
-        dd($this->author);
         return [
             'id' =>$this->id,
             'slug' => $this->slug,
