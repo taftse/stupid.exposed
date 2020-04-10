@@ -21,8 +21,18 @@ export default  new VueRouter(
                 component: Home
             },
             {
+                path:'/login',
+                name: 'login',
+                component: Home
+            },
+            {
+                path:'/register',
+                name: 'register',
+                component: Home
+            },
+            {
                 path:'/posts/:filter?',
-                name: 'posts',
+                name: 'posts.index',
                 component: Posts,
                 props: true
             },

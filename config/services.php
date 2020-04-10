@@ -33,19 +33,26 @@ return [
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'http://your-callback-url',
+        'redirect' => 'https://stupid.exposed/oauth2/facebook/callback',
     ],
 
     'twitter' => [
         'client_id' => env('TWITTER_CLIENT_ID'),
         'client_secret' => env('TWITTER_CLIENT_SECRET'),
-        'redirect' => 'http://your-callback-url',
+        'redirect' => 'https://stupid.exposed/oauth2/twitter/callback',
     ],
 
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://your-callback-url',
+        'redirect' => 'https://stupid.exposed/oauth2/google/callback',
     ],
+
+    'microsoft' => [
+        'client_id' => env('MICROSOFT_CLIENT_ID'),
+        'client_secret' => env('MICROSOFT_CLIENT_SECRET'),
+        'redirect' => 'https://stupid.exposed/oauth2/microsoft/callback',
+    ],
+
 
 ];

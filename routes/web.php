@@ -21,6 +21,10 @@ Route::get('osd.xml',function (){
 });
 Route::get('language/{local}',[\SKE\Language\Http\Controllers\LanguageController::class,'handle'])->name('translations');
 
+Route::get('terms',function (){
+    return 'add some term of service';
+})->name('tos');
+
 Route::view('{any?}', 'spa')->where('any', '.*')->name('home');
 
 

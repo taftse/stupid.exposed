@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'email', 'password','dob','tos_agreed_at'
     ];
 
     /**
@@ -31,16 +31,31 @@ class User extends Authenticatable
     ];
 
     /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'dob',
+    ];
+
+    /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'tos_agreed_at' => 'datetime',
     ];
 
     public function posts()
     {
        return $this->hasMany(Post::class);
+    }
+
+    public function OauthAccounts()
+    {
+        return $this->hasMany(OauthAccount::class);
     }
 }

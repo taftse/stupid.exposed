@@ -15,6 +15,8 @@
         <script src="{{mix('js/app.js')}}" defer></script>
         <script src="{{route('translations',app()->getLocale())}}" ></script>
 
+        <script data-ad-client="ca-pub-1296991168449447" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -24,8 +26,8 @@
     </head>
     <body>
         <div id="app" class="bg-gray-200">
-            <header class="hidden lg:block bg-gray-800 pb-32">
-                <nav class="bg-gray-800">
+            <header class="hidden lg:block bg-gray-700 pb-32">
+                <nav class="bg-gray-700">
                     <div class="max-w-7xl mx-auto px-6 lg:px-8">
                         <div class="border-b border-gray-700">
                             <div class="flex items-center justify-between h-16 px-0">
@@ -35,12 +37,18 @@
                                     </div>
                                     <div class="ml-10 flex items-baseline">
                                         <router-link :to="{name:'posts.index'}" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</router-link>
-                                        <router-link :to="{name:'posts.index',props:{filter:'hot'}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Hot</router-link>
-                                        <router-link :to="{name:'Categories'}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Categories</router-link>
-                                        <router-link :to="{name:'posts.index',props:{filter:'latest'}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Latest</router-link>
+                                        <router-link :to="{name:'posts.index',params:{filter:'hot'}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Hot</router-link>
+                                        <router-link :to="{name:'categories.index'}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Categories</router-link>
+                                        <router-link :to="{name:'posts.index',params:{filter:'latest'}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Latest</router-link>
                                         <router-link :to="{name:'posts.random'}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Random</router-link>
                                     </div>
                                 </div>
+                                @guest
+                                    <div class="ml-6 flex items-center">
+                                        <a href="{{route('login')}}" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-pink-700 focus:outline-none focus:text-white focus:bg-pink-500">{{__('Log in')}}</a>
+                                        <a href="{{route('register')}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-white bg-pink-700 focus:outline-none focus:text-white focus:bg-pink-500">{{__('Register')}}</a>
+                                    </div>
+                                @else
                                 <div class="ml-6 flex items-center">
                                     <button class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" aria-label="Notifications">
                                         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -78,6 +86,7 @@
                                     </div>
                                     -->
                                 </div>
+                                @endguest
 
                             </div>
                         </div>
@@ -86,14 +95,14 @@
 
             </header>
             <main class="pt-5 md:-mt-32">
-                <div class="max-w-7xl pb-12 px4 sm:px-6 lg:px-8 object-right">
+                <div class="max-w-7xl pb-12 px-4 sm:px-6 lg:px-8 mx-auto">
                     <div class="mx-auto flex" >
                         <div class="hidden lg:block max-w-2xl w-1/6">
                         </div>
                         <div class="w-full  md:max-w-6x1 w-4/6">
                             @yield('content')
                         </div>
-                        <div class="hidden lg:block w-1/4 max-w-2xl">
+                        <div class="hidden lg:block w-1/4 max-w-2xl bg-white">
                            <!-- adds section -->
                         </div>
                     </div>
