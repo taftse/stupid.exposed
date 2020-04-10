@@ -1,10 +1,12 @@
 <template>
-
+    <div class="post-text">
+        {{ component.text }}
+    </div>
 </template>
 
 <script>
     export default {
-        name: "TextComponent"
+        props:['component']
     }
 </script>
 
