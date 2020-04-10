@@ -17,7 +17,7 @@ class MediaFileResource extends JsonResource
     {
         return [
             'type' => $this->type,
-            'url' => 'https://'.Storage::disk('s3')->url($this->url),//"https://".env('AWS_URL').$this->url,
+            'url' => Storage::disk('s3')->url($this->url),//"https://".env('AWS_URL').$this->url,
             'width' => $this->width,
             'height' => $this->height,
         ];

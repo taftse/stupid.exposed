@@ -1,0 +1,15 @@
+id: 8877
+name: stupidexposed
+environments:
+    production:
+        domain: beta.stupid.exposed
+        storage: cdn.stupid.exposed
+        database: Tools4Schools-Production
+        memory: 1024
+        cli-memory: 512
+        runtime: php-7.4
+        build:
+            - 'composer install --no-dev'
+            - 'php artisan event:cache'
+            - 'npm ci && npm run prod && rm -rf node_modules'
+
