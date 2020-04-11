@@ -1,5 +1,7 @@
 <template>
-    <iframe class="post-video" :src="'https://www.youtube-nocookie.com/embed/'+video.url" frameborder="0" allowfullscreen></iframe>
+    <div class="embed-responsive aspect-ratio-16/9">
+        <iframe class="embed-responsive-item" :src="'https://www.youtube-nocookie.com/embed/'+video.url" frameborder="0" allowfullscreen></iframe>
+    </div>
 </template>
 
 <script>

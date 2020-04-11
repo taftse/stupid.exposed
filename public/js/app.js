@@ -2325,6 +2325,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['video']
 });
@@ -39839,14 +39841,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "embed-responsive aspect-ratio-16/9" }, [
     _vm.video.embed_html
-      ? _c("div", [_vm._v(_vm._s(_vm.video.embed_html))])
+      ? _c("div", { staticClass: "embed-responsive-item" }, [
+          _vm._v(_vm._s(_vm.video.embed_html))
+        ])
       : _vm._e(),
     _vm._v(" "),
     _vm.video.url
       ? _c("iframe", {
-          staticClass: "post-video",
+          staticClass: "embed-responsive-item",
           attrs: {
             src: "https://player.vimeo.com/video/" + _vm.video.url,
             width: "100%",
@@ -39881,14 +39885,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("iframe", {
-    staticClass: "post-video",
-    attrs: {
-      src: "https://www.youtube-nocookie.com/embed/" + _vm.video.url,
-      frameborder: "0",
-      allowfullscreen: ""
-    }
-  })
+  return _c("div", { staticClass: "embed-responsive aspect-ratio-16/9" }, [
+    _c("iframe", {
+      staticClass: "embed-responsive-item",
+      attrs: {
+        src: "https://www.youtube-nocookie.com/embed/" + _vm.video.url,
+        frameborder: "0",
+        allowfullscreen: ""
+      }
+    })
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
