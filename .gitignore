@@ -10,4 +10,10 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/.idea
+.idea/
+public/vendor/telescope/
+app/Providers/TelescopeServiceProvider.php
+config/telescope.php
+.vapor/
+.env.production
+.env.staging
