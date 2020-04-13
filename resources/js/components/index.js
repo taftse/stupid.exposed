@@ -18,13 +18,12 @@ Vue.component('card-footer',CardFooter);
 
 import PostDetails from './Post/PostDetails';
 import PostPreview from "./Post/PostPreview";
-import TextComponent from "./Post/Components/TextComponent";
-import ImageComponent from "./Post/Components/ImageComponent";
-import VideoComponent from "./Post/Components/VideoComponent";
-import VimeoVideoProvider from "./Post/Components/Video/VimeoVideoProvider";
-import YouTubeVideoProvider from "./Post/Components/Video/YouTubeVideoProvider";
-
-import AudioComponent from "./Post/Components/AudioComponent";
+import TextComponent from "./Post/Components/View/TextComponent";
+import ImageComponent from "./Post/Components/View/ImageComponent";
+import VideoComponent from "./Post/Components/View/VideoComponent";
+import VimeoVideoProvider from "./Post/Components/View/Video/VimeoVideoProvider";
+import YouTubeVideoProvider from "./Post/Components/View/Video/YouTubeVideoProvider";
+import AudioComponent from "./Post/Components/View/AudioComponent";
 
 
 

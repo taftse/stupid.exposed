@@ -8,8 +8,11 @@ import Home from './Pages/Home'
 import Posts from './Pages/Posts'
 import ShowPost from './Pages/Posts/Show'
 import EditPost from './Pages/Posts/Edit'
+import CreatePost from './Pages/Posts/Create'
 
 import ShowAuthor from './Pages/Author/Show'
+
+import IndexTags from './Pages/Tags'
 
 export default  new VueRouter(
     {
@@ -18,17 +21,12 @@ export default  new VueRouter(
             {
                 path:'/',
                 name: 'home',
-                component: Home
+                component: Posts
             },
             {
-                path:'/login',
-                name: 'login',
-                component: Home
-            },
-            {
-                path:'/register',
-                name: 'register',
-                component: Home
+                path:'/posts/add',
+                name: 'post.create',
+                component: CreatePost
             },
             {
                 path:'/posts/:filter?',
@@ -54,6 +52,12 @@ export default  new VueRouter(
                 component: ShowAuthor,
                 props: true
             },
+            {
+                path:'/tags/:filter?',
+                name: 'tags.index',
+                component: IndexTags,
+                props: true
+            }
         ]
     }
 )
