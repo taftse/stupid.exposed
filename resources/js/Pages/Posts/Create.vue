@@ -11,7 +11,15 @@
                             </div>
                             <p class="mt-2 text-sm text-gray-500">{{__('Are you really that stupid that I need to explain this ?')}}</p>
                         </div>
-                        <component v-if="components" v-for="component in components" v-bind:key="component.id" :is="'add-'+component.type+'-component'" :component="component"></component>
+                        <component
+                            v-if="components"
+                            v-for="(component, index) in components"
+                            v-bind:key="component.id"
+                            :is="'add-'+component.type+'-component'"
+                            @remove-component="components.splice(index,1)"
+                            @update-component="updateComponent"
+                            v-model="components[index]"
+                        />
                         <component-selections @add-component="addComponent"></component-selections>
                     </form>
                 </card-body>
@@ -24,18 +32,28 @@
 <script>
     import ComponentSelections from "../../components/Post/Components/Create/ComponentSelections";
     import AddTextComponent from "../../components/Post/Components/Create/AddTextComponent";
-    import AddMediaComponent from "../../components/Post/Components/Create/AddMediaComponent";
+    import AddImageComponent from "../../components/Post/Components/Create/AddImageComponent";
+    import AddVideoComponent from "../../components/Post/Components/Create/AddVideoComponent";
     export default {
-        components: {ComponentSelections,AddTextComponent,AddMediaComponent},
+        components: {
+            ComponentSelections,
+            AddTextComponent,
+            AddImageComponent,
+            AddVideoComponent,
+        },
         data:()=>({
             components:[{
-                type:'media'
+                type:'Image'
             }]
         }),
         methods:{
             addComponent(component){
                 this.components.push(component)
-            }
+            },
+            updateComponent(component)
+            {
+
+            },
         }
     }
 </script>

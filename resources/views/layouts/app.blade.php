@@ -36,11 +36,36 @@
                                         <img class="h-12 w-12" src="{{asset('img/logo_transparent_bg.png')}}" alt="STUPID.EXPOSED logo">
                                     </div>
                                     <div class="ml-10 flex items-baseline">
-                                        <router-link :to="{name:'posts.index'}" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</router-link>
-                                        <router-link :to="{name:'posts.index',params:{filter:'hot'}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Hot</router-link>
-                                        <router-link :to="{name:'categories.index'}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Categories</router-link>
-                                        <router-link :to="{name:'posts.index',params:{filter:'latest'}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Latest</router-link>
-                                        <router-link :to="{name:'posts.random'}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Random</router-link>
+                                        <router-link :to="{name:'posts.index',params:{filter:'hot'}}" class="inline-flex items-center px-3 py-2 rounded-md text-sm font-medium text-orange-400 hover:text-white bg-red-800 focus:outline-none focus:text-white focus:bg-red-900">
+                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 384 512" class="-ml-0.5 mr-2 h-4 w-4">
+                                                <path fill="currentColor" d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z" class=""></path>
+                                            </svg>
+                                            Hot
+                                        </router-link>
+                                        <router-link :to="{name:'posts.index',params:{filter:'latest'}}" class="inline-flex items-center ml-4 px-3 py-2 rounded-md text-sm font-medium text-green-300 bg-blue-700 hover:text-white focus:outline-none focus:text-white focus:bg-gray-700">
+                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 512 512" class="-ml-0.5 mr-2 h-4 w-4">
+                                                <path fill="currentColor" d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z" class=""></path></path>
+                                            </svg>
+                                            Latest
+                                        </router-link>
+                                        <router-link :to="{name:'posts.index',params:{filter:'legendary'}}" class="inline-flex items-center ml-4 px-3 py-2 rounded-md text-sm font-medium text-yellow-400 bg-green-600 hover:text-white focus:outline-none focus:text-white focus:bg-gray-700">
+                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 576 512" class="-ml-0.5 mr-2 h-4 w-4">
+                                                <path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
+                                            </svg>
+                                            Legendary
+                                        </router-link>
+                                        <router-link :to="{name:'tags.index'}" class="inline-flex items-center ml-4 px-3 py-2 rounded-md text-sm font-medium text-pink-300 bg-purple-500 hover:text-white  focus:outline-none focus:text-white focus:bg-gray-700">
+                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 640 512" class="-ml-0.5 mr-2 h-4 w-4">
+                                                <path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z" class=""></path>
+                                            </svg>
+                                            Tags
+                                        </router-link>
+                                        <router-link :to="{name:'post.create'}" class="inline-flex items-center ml-4 px-3 py-2 rounded-md text-sm font-medium text-white bg-pink-500 focus:outline-none focus:text-white focus:bg-pink-700">
+                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 512 512" class="-ml-0.5 mr-2 h-4 w-4">
+                                                <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z" class=""></path>
+                                            </svg>
+                                            Add More Stupid
+                                        </router-link>
                                     </div>
                                 </div>
                                 @guest

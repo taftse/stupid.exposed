@@ -18,10 +18,10 @@
         "less-loader": "^5.0.0",
         "lodash": "^4.17.13",
         "resolve-url-loader": "^2.3.1",
+        "tailwindcss-aspect-ratio": "^3.0.0",
         "tailwindcss-responsive-embed": "^1.0.0",
         "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10",
-        "tailwindcss-aspect-ratio": "^3.0.0"
+        "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
         "@tailwindcss/ui": "^0.1.3",
