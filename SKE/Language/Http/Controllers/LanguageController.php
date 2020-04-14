@@ -11,6 +11,6 @@ class LanguageController extends Controller
 
     public function handle($lang)
     {
-        return response("windows.config.translations = ['test'=>'test']")->header('Content-Type', 'text/javascript');
+        return response("window.config = {};window.config.translations = {'test':'test'};")->header('Content-Type', 'text/javascript');
     }
 }
