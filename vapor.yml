@@ -2,6 +2,7 @@ id: 8877
 name: stupidexposed
 environments:
     production:
+        gateway-version: 2
         domain: beta.stupid.exposed
         storage: cdn.stupid.exposed
         database: Tools4Schools-Production
