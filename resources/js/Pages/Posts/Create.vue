@@ -3,7 +3,7 @@
         <div class="max-w-none mx-auto">
             <card class="sm:rounded-lg">
                 <card-body>
-                    <form>
+                    <form @submit.prevent="savePost">
                         <div>
                             <label for="title" class="block text-sm font-medium leading-5 text-gray-700">Title</label>
                             <div class="mt-1 relative rounded-md shadow-sm">
@@ -12,15 +12,22 @@
                             <p class="mt-2 text-sm text-gray-500">{{__('Are you really that stupid that I need to explain this ?')}}</p>
                         </div>
                         <component
-                            v-if="components"
-                            v-for="(component, index) in components"
+                            v-if="value.components"
+                            v-for="(component, index) in value.components"
                             v-bind:key="component.id"
                             :is="'add-'+component.type+'-component'"
-                            @remove-component="components.splice(index,1)"
-                            @update-component="updateComponent"
-                            v-model="components[index]"
+                            @remove-component="value.components.splice(index,1)"
+                            v-model="value.components[index]"
                         />
                         <component-selections @add-component="addComponent"></component-selections>
+                        <div class="mt-8 flex justify-end">
+
+                            <span class="ml-3 inline-flex rounded-md shadow-sm">
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                Save
+              </button>
+            </span>
+                        </div>
                     </form>
                 </card-body>
 
@@ -42,18 +49,28 @@
             AddVideoComponent,
         },
         data:()=>({
-            components:[{
-                type:'Image'
-            }]
+            value:{
+                title:'',
+                components:[{
+                    type:'Text'
+                }],
+                tags:[],
+            },
+
         }),
         methods:{
             addComponent(component){
-                this.components.push(component)
+                this.value.components.push(component)
             },
-            updateComponent(component)
-            {
-
-            },
+            savePost(){
+                axios.post('/posts/',this.value)
+                    .then(response =>{
+                        console.log('redirect to new post')
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    })
+            }
         }
     }
 </script>
